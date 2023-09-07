@@ -26,7 +26,7 @@ node {
                 nvm use 16
                 npm install
                 export PERCY_TOKEN==${PERCY_TOKEN}
-                npx percy app:exec -- mvn clean test -P bstack-parallel-regression
+                npx percy exec --verbose  --  mvn test -P bstack-parallel-regression
                 '''
                 }
             }
