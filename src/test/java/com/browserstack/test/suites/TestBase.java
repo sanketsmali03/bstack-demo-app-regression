@@ -35,6 +35,7 @@ public class TestBase {
 
         MutableCapabilities capabilities = new MutableCapabilities();
         HashMap<String, String> bstackOptions = new HashMap<>();
+        bstackOptions.put("appProfiling", "true");
         capabilities.setCapability("bstack:options", bstackOptions);
         driver = new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"), capabilities);
         percy = new AppPercy(driver);
